@@ -6,29 +6,43 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     position: relative;
     font-family: 'Acme', sans-serif;
 }
 
 .container .main_header {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
     height: 60px;
-    background-color: aquamarine;
+    background-color: #9B96FF;
     line-height: 60px;
 }
 
 .container .nav {
-    position: relative;
+    position: fixed;
+    display: block;
+    top: 60px;
+    left: 0;
+    z-index: 11;
     width: 100%;
-    background-color: bisque;
+    background-color: #4A46B3;
     margin: 0 0 10px 0;
 }
 
 .container .nav .main_nav {
-    position: sticky;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -44,10 +58,16 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8em;
+    transition: 0.6s;
+    color: #fff;
+
 }
 
 .container .main_content {
     position: relative;
+    display: block;
+    top: 90px;
+    left: 0;
     width: 100%;
 }
 
@@ -62,6 +82,7 @@
 .container .main_content .section {
     position: relative;
     display: flex;
+    margin-top: 10px;
     flex-direction: column;
     width: 100%;
     padding: 15px;
@@ -69,14 +90,13 @@
     align-items: center;
 }
 
-.container .main_content #servicios {
-    background-color: blueviolet;
-    color: white;
+.container .main_content .section:nth-child(odd) {
+    background-color: #FFE457;
 }
 
-.container .main_content #alimentos {
-    background-color: blue;
-    color: white;
+.container .main_content .section:nth-child(even) {
+    background-color: #B39D34;
+    color: #000;
 }
 
 .container .main_content .section>h2 {
@@ -87,11 +107,12 @@
 .container .main_content .section .service_box {
     position: relative;
     display: flex;
-    width: 90%;
+    width: 70%;
     padding: 10px;
     margin-top: 20px;
     ;
     box-shadow: 2px 0px 11px 9px rgba(82, 76, 82, 0.68);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .container .main_content .section .service_box .service_header {
@@ -128,10 +149,30 @@
 
 .container .main_content .section .service_box ul li a {
     text-decoration: none;
-    color: white;
 }
 
 .container .main_content .section .service_box .redes {
     display: flex;
     flex-direction: column;
+}
+
+.container .main_content .section .service_box .redes .fa-facebook {
+    color: #3b5998;
+}
+
+.container .main_content .section .service_box .redes .fa-instagram {
+    color: #fff;
+    background: radial-gradient(ellipse at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.container .main_content .section .service_box .redes .fa-youtube {
+    color: #c4302b;
+}
+
+.container .main_content .section .service_box .redes .fa-twitter {
+    color: #00acee;
+}
+
+.container .main_content .section .service_box .redes .fa-whatsapp {
+    color: #25d366;
 }
