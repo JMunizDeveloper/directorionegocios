@@ -27,7 +27,7 @@ html {
     text-align: center;
     text-transform: uppercase;
     height: 60px;
-    background-color: #9B96FF;
+    background-color: #377DB3;
     line-height: 60px;
 }
 
@@ -38,13 +38,16 @@ html {
     left: 0;
     z-index: 11;
     width: 100%;
-    background-color: #4A46B3;
+    background-color: #4DB2FF;
     margin: 0 0 10px 0;
 }
 
 .container .nav .main_nav {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
     align-items: center;
     height: 30px;
     list-style: none;
@@ -58,8 +61,7 @@ html {
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8em;
-    transition: 0.6s;
-    color: #fff;
+    color: #000;
 
 }
 
@@ -81,21 +83,26 @@ html {
 
 .container .main_content .section {
     position: relative;
+    display: -webkit-box;
     display: flex;
     margin-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     width: 100%;
     padding: 15px;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
 
 .container .main_content .section:nth-child(odd) {
-    background-color: #FFE457;
+    background-color: #DBC5A2;
 }
 
 .container .main_content .section:nth-child(even) {
-    background-color: #B39D34;
+    background-color: #E6A84C;
     color: #000;
 }
 
@@ -106,6 +113,7 @@ html {
 
 .container .main_content .section .service_box {
     position: relative;
+    display: -webkit-box;
     display: flex;
     width: 70%;
     padding: 10px;
@@ -117,23 +125,35 @@ html {
 
 .container .main_content .section .service_box .service_header {
     width: 50%;
+    display: -webkit-box;
     display: flex;
     justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
+    -webkit-box-align: center;
     align-items: center;
     padding: 10px;
-    border-style: groove;
     text-transform: uppercase;
+    border-style: groove;
+    text-align: center;
 }
 
 .container .main_content .section .service_box .service_description {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
     align-items: center;
+    border-style: groove;
 }
 
 .container .main_content .section .service_box .service_description ul {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     list-style: none;
     width: 70%;
@@ -147,13 +167,36 @@ html {
 
 }
 
+.container .main_content .section .service_box ul li span {
+    color: #3b5998;
+    font-weight: bold;
+}
+
+
 .container .main_content .section .service_box ul li a {
     text-decoration: none;
 }
 
 .container .main_content .section .service_box .redes {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+}
+
+.container .main_content .section .service_box .redes h3 {
+    width: 250px;
+    margin-bottom: 10px;
+    border-bottom-style: dotted;
+}
+
+.container .main_content .section .service_box .redes ul {
+    width: 500px;
 }
 
 .container .main_content .section .service_box .redes .fa-facebook {
